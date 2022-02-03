@@ -39,7 +39,7 @@
 		F854FA8927A833CF00E2DDE4 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		F854FA8B27A8347100E2DDE4 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
 		F854FA8D27A836EC00E2DDE4 /* OrderResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderResponse.swift; sourceTree = "<group>"; };
-		F854FA8F27A837CC00E2DDE4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Order.swift; path = ../../../../Downloads/Order.swift; sourceTree = "<group>"; };
+		F854FA8F27A837CC00E2DDE4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
