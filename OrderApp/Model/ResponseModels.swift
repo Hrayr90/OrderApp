@@ -8,5 +8,5 @@
 import Foundation
 
 struct MenuResponse: Codable {
-    let item: [MenuItem]
+    let items: [MenuItem]
 }
