@@ -25,7 +25,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="HRC-JP-0WK" kind="show" id="2dd-rQ-Frg"/>
+                                    <segue destination="HRC-JP-0WK" kind="show" destinationCreationSelector="showMenu:sender:" id="2dd-rQ-Frg"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
