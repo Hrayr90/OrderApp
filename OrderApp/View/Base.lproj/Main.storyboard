@@ -40,10 +40,10 @@
             </objects>
             <point key="canvasLocation" x="1554" y="78"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="GIO-2L-TS7">
             <objects>
-                <tableViewController id="HRC-JP-0WK" sceneMemberID="viewController">
+                <tableViewController id="HRC-JP-0WK" customClass="MenuTableViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="21U-hr-eVe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,7 +73,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jig-ut-3Om" kind="show" id="TTL-Du-zrf"/>
+                                    <segue destination="Jig-ut-3Om" kind="show" destinationCreationSelector="showMenuItem:sender:" id="TTL-Du-zrf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="2493" y="78"/>
         </scene>
-        <!--Restaurant-->
+        <!--Menu Item Detali View Controller-->
         <scene sceneID="zTb-4Q-dPD">
             <objects>
                 <viewController id="Jig-ut-3Om" customClass="MenuItemDetaliViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -98,7 +98,7 @@
                         <viewLayoutGuide key="safeArea" id="6ZL-WD-UOa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurant" id="5yI-mo-6pf"/>
+                    <navigationItem key="navigationItem" id="5yI-mo-6pf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxr-mn-jEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -51,6 +51,17 @@ class MenuTableViewController: UITableViewController {
         self.present(alert, animated: true)
     }
     
+    @IBSegueAction func showMenuItem(_ coder: NSCoder, sender: Any?) -> MenuItemDetaliViewController? {
+        
+        guard let cell = sender as? UITableViewCell,
+              let indexPath = tableView.indexPath(for: cell)
+        else { return nil }
+        
+        let menuItem = menuItems[indexPath.row]
+        
+        return MenuItemDetaliViewController(coder: coder, menuIteam: menuItem)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
