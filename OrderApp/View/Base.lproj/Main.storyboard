@@ -40,24 +40,40 @@
             </objects>
             <point key="canvasLocation" x="1554" y="78"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Menu Table View Controller-->
         <scene sceneID="GIO-2L-TS7">
             <objects>
-                <tableViewController id="HRC-JP-0WK" sceneMemberID="viewController">
+                <tableViewController id="HRC-JP-0WK" customClass="MenuTableViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="21U-hr-eVe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="I9Y-mH-dHR">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MenuItem" textLabel="Ly2-K7-jb6" detailTextLabel="sNR-2h-1mw" style="IBUITableViewCellStyleValue1" id="I9Y-mH-dHR">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I9Y-mH-dHR" id="Jq6-zQ-3jE">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="[name]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ly2-K7-jb6">
+                                            <rect key="frame" x="20" y="15" width="40.5" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="[price]" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sNR-2h-1mw">
+                                            <rect key="frame" x="339.5" y="15" width="38" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Jig-ut-3Om" kind="show" id="TTL-Du-zrf"/>
+                                    <segue destination="Jig-ut-3Om" kind="show" destinationCreationSelector="showMenuItem:sender:" id="TTL-Du-zrf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="2493" y="78"/>
         </scene>
-        <!--Restaurant-->
+        <!--Menu Item Detali View Controller-->
         <scene sceneID="zTb-4Q-dPD">
             <objects>
                 <viewController id="Jig-ut-3Om" customClass="MenuItemDetaliViewController" customModule="OrderApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -82,7 +98,7 @@
                         <viewLayoutGuide key="safeArea" id="6ZL-WD-UOa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Restaurant" id="5yI-mo-6pf"/>
+                    <navigationItem key="navigationItem" id="5yI-mo-6pf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxr-mn-jEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

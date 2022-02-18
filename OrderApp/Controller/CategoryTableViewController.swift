@@ -8,7 +8,7 @@
 import UIKit
 
 class CategoryTableViewController: UITableViewController {
-    let menuController = MenuController()
+    
     var categories = [String]()
     
     override func viewDidLoad() {
@@ -16,7 +16,7 @@ class CategoryTableViewController: UITableViewController {
         
         Task.init {
             do {
-                let categaries = try await menuController.fetchCategories()
+                let categaries = try await MenuController.shared.fetchCategories()
                 updateUI(with: categaries)
             } catch {
                 displayError(error, title: "Failed to Fetch Categories")
