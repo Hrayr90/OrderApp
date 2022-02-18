@@ -10,7 +10,6 @@ import UIKit
 class MenuTableViewController: UITableViewController {
 
     let category: String
-    let menuController = MenuController()
     var menuItems = [MenuItem]()
     init?(coder: NSCoder, category: String) {
         self.category = category
@@ -28,7 +27,7 @@ class MenuTableViewController: UITableViewController {
         
         Task.init {
             do {
-                let menuItems = try await menuController.fetchMenuItams(forCategary: category)
+                let menuItems = try await MenuController.shared.fetchMenuItams(forCategary: category)
                 updateUI(with: menuItems)
             } catch {
                 displayError(error, title: "Failed to Fetch Menu Items for \(self.category)")

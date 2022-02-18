@@ -10,6 +10,8 @@ import Foundation
 class MenuController {
     private let baseURL = URL(string: "http://localhost:8080/")
     
+    static let shared = MenuController()
+    
     func fetchCategories() async throws -> [String] {
         guard let categoriesURL = baseURL?.appendingPathComponent("categories") else { fatalError() }
         
