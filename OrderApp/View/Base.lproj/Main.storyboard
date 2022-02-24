@@ -134,6 +134,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Add To Order"/>
+                                <connections>
+                                    <action selector="orderButtonTapped:" destination="Jig-ut-3Om" eventType="touchUpInside" id="ZeC-i1-Rr4"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6ZL-WD-UOa"/>
@@ -149,6 +152,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5yI-mo-6pf"/>
+                    <connections>
+                        <outlet property="addToOrderButton" destination="9v4-8g-ZDG" id="fhZ-K3-xsF"/>
+                        <outlet property="detaliTextLable" destination="VnZ-5w-pcu" id="7ZA-Ss-zJS"/>
+                        <outlet property="imageView" destination="Ph3-Gw-1xg" id="Uvu-eJ-LNX"/>
+                        <outlet property="nameLabale" destination="dxE-eD-imd" id="Tt7-zv-WrP"/>
+                        <outlet property="priceLable" destination="nQ6-21-Hb4" id="x4G-cA-pma"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rxr-mn-jEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
