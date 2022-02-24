@@ -95,8 +95,58 @@
                     <view key="view" contentMode="scaleToFill" id="2XB-h2-VKK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ejE-aP-Cnl">
+                                <rect key="frame" x="15" y="155" width="384" height="276.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ph3-Gw-1xg">
+                                        <rect key="frame" x="0.0" y="0.5" width="384" height="223"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bFf-7M-awd">
+                                        <rect key="frame" x="0.0" y="232" width="384" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Item name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxE-eD-imd">
+                                                <rect key="frame" x="0.0" y="0.0" width="327" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQ6-21-Hb4">
+                                                <rect key="frame" x="335" y="0.0" width="49" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Detali" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VnZ-5w-pcu">
+                                        <rect key="frame" x="0.0" y="260.5" width="384" height="16"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9v4-8g-ZDG">
+                                <rect key="frame" x="15" y="754" width="384" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6Si-lc-8Ii"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Add To Order"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6ZL-WD-UOa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6ZL-WD-UOa" firstAttribute="trailing" secondItem="ejE-aP-Cnl" secondAttribute="trailing" constant="15" id="26L-bL-Nol"/>
+                            <constraint firstItem="9v4-8g-ZDG" firstAttribute="leading" secondItem="6ZL-WD-UOa" secondAttribute="leading" constant="15" id="6zU-qa-YxH"/>
+                            <constraint firstItem="ejE-aP-Cnl" firstAttribute="top" secondItem="6ZL-WD-UOa" secondAttribute="top" constant="15" id="9uN-QN-f0w"/>
+                            <constraint firstItem="6ZL-WD-UOa" firstAttribute="bottom" secondItem="9v4-8g-ZDG" secondAttribute="bottom" constant="15" id="9v5-Aa-Oo1"/>
+                            <constraint firstItem="ejE-aP-Cnl" firstAttribute="leading" secondItem="6ZL-WD-UOa" secondAttribute="leading" constant="15" id="BW3-Oa-m3J"/>
+                            <constraint firstItem="6ZL-WD-UOa" firstAttribute="trailing" secondItem="9v4-8g-ZDG" secondAttribute="trailing" constant="15" id="Drh-Jm-jGl"/>
+                            <constraint firstItem="Ph3-Gw-1xg" firstAttribute="height" secondItem="2XB-h2-VKK" secondAttribute="height" multiplier="0.25" id="xiL-wW-Sfq"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5yI-mo-6pf"/>
                 </viewController>
@@ -190,6 +240,7 @@
     <resources>
         <image name="bag" catalog="system" width="128" height="128"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
+        <image name="photo.on.rectangle" catalog="system" width="128" height="97"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

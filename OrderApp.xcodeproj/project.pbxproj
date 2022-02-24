@@ -80,7 +80,6 @@
 				F828715A27A775F50099E892 /* AppDelegate.swift */,
 				F828715C27A775F50099E892 /* SceneDelegate.swift */,
 				F828716327A775F60099E892 /* Assets.xcassets */,
-				F828716527A775F60099E892 /* LaunchScreen.storyboard */,
 				F828716827A775F60099E892 /* Info.plist */,
 			);
 			path = OrderApp;
@@ -102,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				F828716027A775F50099E892 /* Main.storyboard */,
+				F828716527A775F60099E892 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
