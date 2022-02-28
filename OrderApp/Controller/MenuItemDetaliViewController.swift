@@ -27,6 +27,8 @@ class MenuItemDetaliViewController: UIViewController {
                 self.addToOrderButton.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
             }
         )
+        
+        MenuController.shared.order.menuItems.append(menuItem)
     }
     
     override func viewDidLoad() {
