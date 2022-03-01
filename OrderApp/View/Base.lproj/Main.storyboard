@@ -240,7 +240,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Dismiss"/>
                                         <connections>
-                                            <segue destination="oPN-jY-0AS" kind="unwind" unwindAction="unwind:" id="nu3-0I-ydT"/>
+                                            <segue destination="oPN-jY-0AS" kind="unwind" identifier="dismissConfirmation" unwindAction="unwind:" id="nu3-0I-ydT"/>
                                         </connections>
                                     </button>
                                 </subviews>
