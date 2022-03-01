@@ -17,6 +17,7 @@
 		F828717627A784360099E892 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F828717527A784360099E892 /* OrderTableViewController.swift */; };
 		F828717827A7881C0099E892 /* MenuItemDetaliViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F828717727A7881C0099E892 /* MenuItemDetaliViewController.swift */; };
 		F82C9D7A27B25FC600354FEC /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82C9D7927B25FC600354FEC /* MenuController.swift */; };
+		F849A08827CD264C000EC0FE /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F849A08727CD264C000EC0FE /* OrderConfirmationViewController.swift */; };
 		F854FA8827A830E400E2DDE4 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F854FA8727A830E400E2DDE4 /* MenuItem.swift */; };
 		F854FA8A27A833CF00E2DDE4 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = F854FA8927A833CF00E2DDE4 /* ResponseModels.swift */; };
 		F854FA8C27A8347100E2DDE4 /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F854FA8B27A8347100E2DDE4 /* CategoriesResponse.swift */; };
@@ -37,6 +38,7 @@
 		F828717527A784360099E892 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 		F828717727A7881C0099E892 /* MenuItemDetaliViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetaliViewController.swift; sourceTree = "<group>"; };
 		F82C9D7927B25FC600354FEC /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		F849A08727CD264C000EC0FE /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
 		F854FA8727A830E400E2DDE4 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		F854FA8927A833CF00E2DDE4 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
 		F854FA8B27A8347100E2DDE4 /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				F828717527A784360099E892 /* OrderTableViewController.swift */,
 				F828717727A7881C0099E892 /* MenuItemDetaliViewController.swift */,
 				F82C9D7927B25FC600354FEC /* MenuController.swift */,
+				F849A08727CD264C000EC0FE /* OrderConfirmationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				F828717427A784210099E892 /* MenuTableViewController.swift in Sources */,
 				F854FA8A27A833CF00E2DDE4 /* ResponseModels.swift in Sources */,
 				F854FA8C27A8347100E2DDE4 /* CategoriesResponse.swift in Sources */,
+				F849A08827CD264C000EC0FE /* OrderConfirmationViewController.swift in Sources */,
 				F82C9D7A27B25FC600354FEC /* MenuController.swift in Sources */,
 				F854FA9027A837CC00E2DDE4 /* Order.swift in Sources */,
 				F828717627A784360099E892 /* OrderTableViewController.swift in Sources */,
