@@ -109,12 +109,19 @@ class OrderTableViewController: UITableViewController {
     
     func configure(_ cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         
+        guard let cell = cell as? MenuItemCell else { return }
+        
         let menuItem = MenuController.shared.order.menuItems[indexPath.row]
-        var content = cell.defaultContentConfiguration()
-        content.text = menuItem.name
-        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
-        content.image = UIImage(systemName: "photo.on.rectangle")
-        cell.contentConfiguration = content
+        
+        cell.itemName = menuItem.name
+        cell.price = menuItem.price
+        cell.image = nil
+        
+       Task {
+            if let image = try? await MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                    cell.image = image
+            }
+        }
     }
     
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

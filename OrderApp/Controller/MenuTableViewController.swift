@@ -8,7 +8,8 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
-
+    
+    var imageLoadTasks: [IndexPath: Task<Void, Never>] = [:]
     let category: String
     var menuItems = [MenuItem]()
     init?(coder: NSCoder, category: String) {
@@ -33,6 +34,10 @@ class MenuTableViewController: UITableViewController {
                 displayError(error, title: "Failed to Fetch Menu Items for \(self.category)")
             }
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        imageLoadTasks[indexPath]?.cancel()
     }
     
     func updateUI(with menuItems: [MenuItem]) {
@@ -61,6 +66,11 @@ class MenuTableViewController: UITableViewController {
         return MenuItemDetaliViewController(coder: coder, menuIteam: menuItem)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        imageLoadTasks.forEach { key, value in value.cancel() }
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -78,12 +88,22 @@ class MenuTableViewController: UITableViewController {
     }
     
     func configure(_ cell: UITableViewCell,forIteamAt indexPath: IndexPath) {
+        guard let cell = cell as? MenuItemCell else { return }
+        
         let menuItem = menuItems[indexPath.row]
         
-        var content = cell.defaultContentConfiguration()
-        content.text = menuItem.name
-        content.secondaryText = menuItem.price.formatted(.currency(code: "usd"))
-        content.image = UIImage(systemName: "photo.on.rectangle")
-        cell.contentConfiguration = content
+        cell.itemName = menuItem.name
+        cell.price = menuItem.price
+        cell.image = nil
+        
+        imageLoadTasks[indexPath] = Task {
+            if let image = try? await MenuController.shared.fetchImage(from: menuItem.imageURL) {
+                if let currentIndexPath = self.tableView.indexPath(for: cell),
+                   currentIndexPath == indexPath {
+                    cell.image = image
+                   }
+            }
+            imageLoadTasks[indexPath] = nil
+        }
     }
 }
