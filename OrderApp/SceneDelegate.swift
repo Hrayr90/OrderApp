@@ -8,12 +8,12 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-   
+
     var window: UIWindow?
     var orderTabBarItem: UITabBarItem!
-    
+
     @objc func updateOrderBage() {
-        
+
         switch MenuController.shared.order.menuItems.count {
         case 0:
             orderTabBarItem.badgeValue = nil
@@ -21,24 +21,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             orderTabBarItem.badgeValue = String(count)
         }
     }
-    
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+
+    func scene(_ scene: UIScene,
+               willConnectTo session: UISceneSession,
+               options connectionOptions: UIScene.ConnectionOptions) {
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateOrderBage),
             name: MenuController.orderUpdateNotification,
             object: nil)
-        
+
         orderTabBarItem = (window?.rootViewController as? UITabBarController)?.viewControllers?[1].tabBarItem
-        
-        guard let _ = (scene as? UIWindowScene) else { return }
+
+        guard (scene as? UIWindowScene) != nil else { return }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
-        // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
+        // Release any resources associated with this scene that can
+        // be re-created the next time the scene connects.
+        // The scene may re-connect later, as its session was
+        // not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -61,7 +65,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
-
